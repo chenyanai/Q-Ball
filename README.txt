@@ -4,7 +4,7 @@ How to train the model:
 	3. The trained model is saved at models/*run time* 
 
 The repo for this code:
-
+https://github.com/chenyanai/Q-Ball
 
 We included some of the data.
 To get the full movement dataset visit:
