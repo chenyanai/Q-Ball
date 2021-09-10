@@ -1,14 +1,9 @@
-import sys
-sys.path.append('/home/chenyan/NBA')
-
 from Data_Loader_Converter import Data_Loader
 
 from DDPG_Model.Actor_Critic import ActorCriticNetwork
 from DDPG_Model.Critic import CriticNetwork
 from DDPG_Model.Actor import ActorNetwork
 from DDPG_Model.Buffer import Buffer
-
-# from tensorflow.python.eager import profiler
 
 from tensorflow.keras.models import load_model
 from datetime import datetime
@@ -84,6 +79,10 @@ if __name__ == '__main__':
     actor_optimizer = tf.keras.optimizers.SGD(actor_lr)
 
     models_folder = r'models'
+
+    if not os.path.exists(models_folder):
+        os.makedirs(models_folder)
+
     data_path = r'data\processed_data\merged_games'
     episodes_path = r'data\processed_data\episodes'
 

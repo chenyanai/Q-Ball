@@ -1,10 +1,6 @@
-# from nba_api.stats.endpoints import playbyplay
 import Codes
 import pandas as pd
 import os
-
-PROCESSED_PBP_PATH = r'D:\NBA_Project\data\play by play\processed'
-RAW_PBP_PATH = r'D:\NBA_Project\data\play by play\raw'
 
 class PBP_Processor():
 

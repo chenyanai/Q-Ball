@@ -6,8 +6,9 @@ How to train the model:
 The repo for this code:
 https://github.com/chenyanai/Q-Ball
 
-We included some of the data.
-To get the full movement dataset visit:
+We included sample of the data, to get the full movement dataset visit:
 https://github.com/sealneaward/nba-movement-data
-To get the full play-by-play dataset use:
-https://github.com/swar/nba_api
+
+To get the full play-by-play dataset run the Play_by_play_scrapping.py script after you downloaded the moments dataset.
+
+Make sure to change the working directory to root directory when running any of the scripts.
