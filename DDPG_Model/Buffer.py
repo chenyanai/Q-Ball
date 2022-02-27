@@ -134,7 +134,7 @@ class Buffer:
             critic_value = target_critic(target_critic_inputs, training=True)
             y = reward_batch + tf.cast(gamma, tf.float32) * critic_value
 
-            critic_inputs = [next_state_batch, discrete_action_batch, continuous_action_batch, attacking_team_id_batch,
+            critic_inputs = [state_batch, discrete_action_batch, continuous_action_batch, attacking_team_id_batch,
                              defending_team_id_batch, attacking_players_stats_batch, defending_players_stats_batch] \
                                    + attacking_players_batches + defending_players_batches
 

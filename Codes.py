@@ -18,13 +18,8 @@ PASS_TYPES = ['pass', 'handoff', 'bad pass']
 BALL_COLOR = '#ff8c00'
 
 using_cluster = False
-
-if using_cluster:
-    players_dict = pd.read_csv(r'/home/chenyan/NBA/Files/players.csv')
-    season_stats = pd.read_csv(r'/home/chenyan/NBA/Files/Season Stats.csv')
-else:
-    players_dict = pd.read_csv(r'C:\Chen\NBA Project\NBA_Tracking_Project\Files\players.csv')
-    season_stats = pd.read_csv(r'C:\Chen\NBA Project\NBA_Tracking_Project\Files\Season Stats.csv')
+players_dict = pd.read_csv(r'data\stats\players.csv')
+season_stats = pd.read_csv(r'data\stats\Season Stats.csv')
 
 TEAM_COLORS_DICT = {
     1610612737: ('#E13A3E', 'ATL'),
@@ -330,5 +325,3 @@ def get_player_stats_by_id(player_id, defending=False):
     if not defending:
         cols += ['FT%', '2P%', '3P%']
     return player_data[cols].values[0].tolist()
-
-# create_player_to_id_file(r'C:\Chen\NBA Project\Raw Data\data\2016.NBA.Raw.SportVU.Game.Logs')
